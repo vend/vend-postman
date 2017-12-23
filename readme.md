@@ -14,4 +14,5 @@ There are other variables which have purposely been left which you will need to 
 # Documentation
 
 [Vend API Documentation](https://docs.vendhq.com/)
+
 [List of available Endpoints](https://documenter.getpostman.com/view/1806395/vend-public-api/7Ln9hhN#10c9d566-55dc-d9f3-1f2e-d164098fbc0c)
