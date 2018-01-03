@@ -1,6 +1,6 @@
 {
 	"info": {
-		"name": "Vend",
+		"name": "Vend Public API",
 		"_postman_id": "cb923f6c-8a0d-364f-1788-32300f0d0dab",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -2699,6 +2699,70 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Setup",
+			"description": "",
+			"item": [
+				{
+					"name": "Retailer Settings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/retailer",
+							"protocol": "https",
+							"host": [
+								"{{domainprefix}}",
+								"vendhq",
+								"com"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"retailer"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "951071f4-d7cc-43d7-8269-c17dd6c706f2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1b140724-5282-4c70-b466-c858a185f6ee",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
