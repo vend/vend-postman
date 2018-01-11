@@ -1379,7 +1379,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignment/{{consignmentid}}",
+							"raw": "https://{{domainprefix}}.vendhq.com/api/consignment/{{consignmentid}}",
 							"protocol": "https",
 							"host": [
 								"{{domainprefix}}",
@@ -1388,7 +1388,6 @@
 							],
 							"path": [
 								"api",
-								"2.0",
 								"consignment",
 								"{{consignmentid}}"
 							]
@@ -1416,7 +1415,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignment",
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignments",
 							"protocol": "https",
 							"host": [
 								"{{domainprefix}}",
@@ -1426,7 +1425,7 @@
 							"path": [
 								"api",
 								"2.0",
-								"consignment"
+								"consignments"
 							]
 						},
 						"description": ""
@@ -1452,7 +1451,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignment/{{consignmentid}}/products",
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignments/{{consignmentid}}/products",
 							"protocol": "https",
 							"host": [
 								"{{domainprefix}}",
@@ -1462,7 +1461,7 @@
 							"path": [
 								"api",
 								"2.0",
-								"consignment",
+								"consignments",
 								"{{consignmentid}}",
 								"products"
 							]
@@ -1490,7 +1489,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignment/{{consignmentid}}",
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/consignments/{{consignmentid}}",
 							"protocol": "https",
 							"host": [
 								"{{domainprefix}}",
@@ -1500,7 +1499,7 @@
 							"path": [
 								"api",
 								"2.0",
-								"consignment",
+								"consignments",
 								"{{consignmentid}}"
 							]
 						},
@@ -1613,6 +1612,41 @@
 								"api",
 								"2.0",
 								"consignments"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create a consignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"0af7b240-ab83-11e7-eddc-38e5834289e2\",\n  \"name\": \"API test 5\",\n  \"consignment_date\": \"2017-05-14 20:40:05\",\n  \"due_at\": null,\n  \"received_at\": null,\n  \"retailer_id\": \"b1c50056-f019-11e3-a0f5-b8ca3a64f8f4\",\n  \"outlet_id\": \"b1e04bd8-f019-11e3-a0f5-b8ca3a64f8f4\",\n  \"supplier_id\": null,\n  \"source_outlet_id\": null,\n  \"status\": \"OPEN\",\n  \"type\": \"RETURN\",\n  \"accounts_transaction_id\": null\n}"
+						},
+						"url": {
+							"raw": "https://{{domainprefix}}.vendhq.com/api/consignment",
+							"protocol": "https",
+							"host": [
+								"{{domainprefix}}",
+								"vendhq",
+								"com"
+							],
+							"path": [
+								"api",
+								"consignment"
 							]
 						},
 						"description": ""
@@ -1923,6 +1957,44 @@
 							"path": [
 								"api",
 								"2.0",
+								"inventory"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single products inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/products/{{productid}}/inventory",
+							"protocol": "https",
+							"host": [
+								"{{domainprefix}}",
+								"vendhq",
+								"com"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"products",
+								"{{productid}}",
 								"inventory"
 							]
 						},
