@@ -1,14 +1,14 @@
 {
 	"info": {
-		"name": "Vend",
+		"name": "Vend API",
 		"_postman_id": "cb923f6c-8a0d-364f-1788-32300f0d0dab",
-		"description": "",
+		"description": "https://docs.vendhq.com/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Webhooks",
-			"description": "",
+			"description": "https://docs.vendhq.com/v0.9/reference#webhooks-1",
 			"item": [
 				{
 					"name": "List Webhooks",
@@ -187,6 +187,28 @@
 						"description": ""
 					},
 					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dc6fda73-9e80-4325-bc97-fadd0da8f52a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "73d7efd7-50b2-46db-8c73-ae7c94721802",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -457,6 +479,108 @@
 					"listen": "test",
 					"script": {
 						"id": "5550eaa1-91aa-40b4-9bfd-f0342e7ca63f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"description": "https://docs.vendhq.com/v0.9/reference#inventory",
+			"item": [
+				{
+					"name": "List inventory records",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/inventory",
+							"protocol": "https",
+							"host": [
+								"{{domainprefix}}",
+								"vendhq",
+								"com"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"inventory"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single products inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/products/{{productid}}/inventory",
+							"protocol": "https",
+							"host": [
+								"{{domainprefix}}",
+								"vendhq",
+								"com"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"products",
+								"{{productid}}",
+								"inventory"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b9b6f95d-2888-4110-acb3-0c0efdd3604b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f71ee2f9-d12f-47ec-8ed7-7c7850b00891",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1012,7 +1136,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/brands/{{typeid}}",
+							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/product_types/{{typeid}}",
 							"protocol": "https",
 							"host": [
 								"{{domainprefix}}",
@@ -1022,7 +1146,7 @@
 							"path": [
 								"api",
 								"2.0",
-								"brands",
+								"product_types",
 								"{{typeid}}"
 							]
 						},
@@ -1916,108 +2040,6 @@
 					"listen": "test",
 					"script": {
 						"id": "39db27c9-72aa-4697-89c9-9efbdddb2c1d",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			]
-		},
-		{
-			"name": "Inventory",
-			"description": "https://docs.vendhq.com/v0.9/reference#inventory",
-			"item": [
-				{
-					"name": "List inventory records",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/inventory",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"inventory"
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Get a single products inventory",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/products/{{productid}}/inventory",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"products",
-								"{{productid}}",
-								"inventory"
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "b9b6f95d-2888-4110-acb3-0c0efdd3604b",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"id": "f71ee2f9-d12f-47ec-8ed7-7c7850b00891",
 						"type": "text/javascript",
 						"exec": [
 							""
