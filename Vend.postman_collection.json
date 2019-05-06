@@ -1,156 +1,145 @@
 {
 	"info": {
 		"_postman_id": "cb923f6c-8a0d-364f-1788-32300f0d0dab",
-		"name": "Vend API",
+		"name": "Vend API Endpoints",
 		"description": "https://docs.vendhq.com/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": [
-		{
+	"item": [{
 			"name": "Authorization",
 			"description": "https://docs.vendhq.com/v0.9/reference#authorisation",
-			"item": [
-				{
-					"name": "OAuth 2.0",
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "",
-									"type": "string"
-								},
-								{
-									"key": "tokenType",
-									"value": "Bearer",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"value": "header",
-									"type": "string"
-								},
-								{
-									"key": "callBackUrl",
-									"type": "any"
-								},
-								{
-									"key": "authUrl",
-									"type": "any"
-								},
-								{
-									"key": "accessTokenUrl",
-									"type": "any"
-								},
-								{
-									"key": "clientId",
-									"type": "any"
-								},
-								{
-									"key": "clientSecret",
-									"type": "any"
-								},
-								{
-									"key": "clientAuth",
-									"type": "any"
-								},
-								{
-									"key": "grantType",
-									"type": "any"
-								},
-								{
-									"key": "scope",
-									"type": "any"
-								},
-								{
-									"key": "username",
-									"type": "any"
-								},
-								{
-									"key": "password",
-									"type": "any"
-								},
-								{
-									"key": "redirectUri",
-									"type": "any"
-								},
-								{
-									"key": "refreshToken",
-									"type": "any"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
+			"item": [{
+				"name": "OAuth 2.0",
+				"request": {
+					"auth": {
+						"type": "oauth2",
+						"oauth2": [{
+								"key": "accessToken",
+								"value": "",
+								"type": "string"
+							},
 							{
-								"key": "",
-								"value": ""
+								"key": "tokenType",
+								"value": "Bearer",
+								"type": "string"
+							},
+							{
+								"key": "addTokenTo",
+								"value": "header",
+								"type": "string"
+							},
+							{
+								"key": "callBackUrl",
+								"type": "any"
+							},
+							{
+								"key": "authUrl",
+								"type": "any"
+							},
+							{
+								"key": "accessTokenUrl",
+								"type": "any"
+							},
+							{
+								"key": "clientId",
+								"type": "any"
+							},
+							{
+								"key": "clientSecret",
+								"type": "any"
+							},
+							{
+								"key": "clientAuth",
+								"type": "any"
+							},
+							{
+								"key": "grantType",
+								"type": "any"
+							},
+							{
+								"key": "scope",
+								"type": "any"
+							},
+							{
+								"key": "username",
+								"type": "any"
+							},
+							{
+								"key": "password",
+								"type": "any"
+							},
+							{
+								"key": "redirectUri",
+								"type": "any"
+							},
+							{
+								"key": "refreshToken",
+								"type": "any"
 							}
-						],
-						"body": {},
-						"url": {
-							"raw": ""
-						}
+						]
 					},
-					"response": []
-				}
-			]
+					"method": "GET",
+					"header": [{
+						"key": "",
+						"value": ""
+					}],
+					"body": {},
+					"url": {
+						"raw": ""
+					}
+				},
+				"response": []
+			}]
 		},
 		{
 			"name": "Cash Management",
 			"description": "",
-			"item": [
-				{
-					"name": "Add Cash Movements",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\"amount\": -50,\n\"user_id\": \"0424dbcd-ef95-11e6-e986-ecd5a6503836\",\n\"date\": \"2017-07-02T20:28:43+00:00\",\n\"type\": \"Cash out\",\n\"note\": \"Bank drop\"\n}"
+			"item": [{
+				"name": "Add Cash Movements",
+				"request": {
+					"method": "POST",
+					"header": [{
+							"key": "Content-Type",
+							"value": "application/json"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/register_open_sequences/{{registerclosureid}}/cash_movements",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"register_open_sequences",
-								"{{registerclosureid}}",
-								"cash_movements"
-							]
-						},
-						"description": "Add a cash movement entry into the register closure."
+						{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
+						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": "{\n\"amount\": -50,\n\"user_id\": \"0424dbcd-ef95-11e6-e986-ecd5a6503836\",\n\"date\": \"2017-07-02T20:28:43+00:00\",\n\"type\": \"Cash out\",\n\"note\": \"Bank drop\"\n}"
 					},
-					"response": []
-				}
-			]
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/register_open_sequences/{{registerclosureid}}/cash_movements",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"register_open_sequences",
+							"{{registerclosureid}}",
+							"cash_movements"
+						]
+					},
+					"description": "Add a cash movement entry into the register closure."
+				},
+				"response": []
+			}]
 		},
 		{
 			"name": "Consignments",
 			"description": "https://docs.vendhq.com/v0.9/reference#consignments-2",
-			"item": [
-				{
+			"item": [{
 					"name": "Delete Consignment",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -186,8 +175,7 @@
 					"name": "List Consignments",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -222,8 +210,7 @@
 					"name": "List all products for a specific consignment",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -260,8 +247,7 @@
 					"name": "Get a single consignment",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -297,8 +283,7 @@
 					"name": "Update Consignment",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -334,8 +319,7 @@
 					"name": "Add a product to consignment",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -372,8 +356,7 @@
 					"name": "Create an inventory count",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -408,8 +391,7 @@
 					"name": "Create a consignment",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -443,8 +425,7 @@
 					"name": "Delete Consignment Product",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -476,8 +457,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "9ca18c2c-f369-4e24-aec9-2cd3b6c36207",
@@ -502,46 +482,42 @@
 		{
 			"name": "Customer Groups",
 			"description": "https://docs.vendhq.com/v0.9/reference#customer-groups",
-			"item": [
-				{
-					"name": "List customer groups",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"data\": {\n    \"id\": \"0af7b240-ab83-11e7-eddc-4023c64c85e5\",\n    \"customer_code\": \"Tony-37YP\",\n    \"name\": \"Tony Stark\",\n    \"first_name\": \"Tony\",\n    \"last_name\": \"Stark\",\n    \"email\": \"tony@starkinc.com\",\n    \"year_to_date\": 0,\n    \"balance\": 0,\n    \"loyalty_balance\": 0,\n    \"note\": null,\n    \"gender\": null,\n    \"date_of_birth\": null,\n    \"company_name\": null,\n    \"do_not_email\": false,\n    \"contact_source\": null,\n    \"phone\": null,\n    \"mobile\": null,\n    \"fax\": null,\n    \"twitter\": null,\n    \"website\": null,\n    \"physical_address_1\": null,\n    \"physical_address_2\": null,\n    \"physical_suburb\": null,\n    \"physical_city\": null,\n    \"physical_postcode\": null,\n    \"physical_state\": null,\n    \"physical_country_id\": null,\n    \"postal_address_1\": null,\n    \"postal_address_2\": null,\n    \"postal_suburb\": null,\n    \"postal_city\": null,\n    \"postal_postcode\": null,\n    \"postal_state\": null,\n    \"postal_country_id\": null,\n    \"customer_group_id\": \"b1ca8902-f019-11e3-a0f5-b8ca3a64f8f4\",\n    \"enable_loyalty\": true,\n    \"custom_field_1\": null,\n    \"custom_field_2\": null,\n    \"custom_field_3\": null,\n    \"custom_field_4\": null,\n    \"created_at\": \"2017-05-24T01:53:25+00:00\",\n    \"updated_at\": \"2017-05-24T01:53:25+00:00\",\n    \"deleted_at\": null,\n    \"version\": 3505346597\n  }\n}"
+			"item": [{
+				"name": "List customer groups",
+				"request": {
+					"method": "GET",
+					"header": [{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/customer_groups",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"customer_groups"
-							]
-						},
-						"description": "Returns a paginated list of customer groups."
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": "{\n  \"data\": {\n    \"id\": \"0af7b240-ab83-11e7-eddc-4023c64c85e5\",\n    \"customer_code\": \"Tony-37YP\",\n    \"name\": \"Tony Stark\",\n    \"first_name\": \"Tony\",\n    \"last_name\": \"Stark\",\n    \"email\": \"tony@starkinc.com\",\n    \"year_to_date\": 0,\n    \"balance\": 0,\n    \"loyalty_balance\": 0,\n    \"note\": null,\n    \"gender\": null,\n    \"date_of_birth\": null,\n    \"company_name\": null,\n    \"do_not_email\": false,\n    \"contact_source\": null,\n    \"phone\": null,\n    \"mobile\": null,\n    \"fax\": null,\n    \"twitter\": null,\n    \"website\": null,\n    \"physical_address_1\": null,\n    \"physical_address_2\": null,\n    \"physical_suburb\": null,\n    \"physical_city\": null,\n    \"physical_postcode\": null,\n    \"physical_state\": null,\n    \"physical_country_id\": null,\n    \"postal_address_1\": null,\n    \"postal_address_2\": null,\n    \"postal_suburb\": null,\n    \"postal_city\": null,\n    \"postal_postcode\": null,\n    \"postal_state\": null,\n    \"postal_country_id\": null,\n    \"customer_group_id\": \"b1ca8902-f019-11e3-a0f5-b8ca3a64f8f4\",\n    \"enable_loyalty\": true,\n    \"custom_field_1\": null,\n    \"custom_field_2\": null,\n    \"custom_field_3\": null,\n    \"custom_field_4\": null,\n    \"created_at\": \"2017-05-24T01:53:25+00:00\",\n    \"updated_at\": \"2017-05-24T01:53:25+00:00\",\n    \"deleted_at\": null,\n    \"version\": 3505346597\n  }\n}"
 					},
-					"response": []
-				}
-			],
-			"event": [
-				{
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/customer_groups",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"customer_groups"
+						]
+					},
+					"description": "Returns a paginated list of customer groups."
+				},
+				"response": []
+			}],
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "93109795-2eb3-4200-813f-c0d814c79491",
@@ -566,13 +542,11 @@
 		{
 			"name": "Customers",
 			"description": "https://docs.vendhq.com/v0.9/reference#customers-2",
-			"item": [
-				{
+			"item": [{
 					"name": "Create new customer",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -607,8 +581,7 @@
 					"name": "List Customers",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -643,8 +616,7 @@
 					"name": "Get a single customer",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -680,8 +652,7 @@
 					"name": "Update Customer",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -717,8 +688,7 @@
 					"name": "Delete Customer",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -751,8 +721,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "8fe9c69c-d857-4e34-8d4a-615f27622f2c",
@@ -777,13 +746,11 @@
 		{
 			"name": "Inventory",
 			"description": "https://docs.vendhq.com/v0.9/reference#inventory",
-			"item": [
-				{
+			"item": [{
 					"name": "List inventory records",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -818,8 +785,7 @@
 					"name": "Get a single products inventory",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -853,8 +819,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "b9b6f95d-2888-4110-acb3-0c0efdd3604b",
@@ -879,46 +844,42 @@
 		{
 			"name": "Outlet Product Taxes",
 			"description": "https://docs.vendhq.com/v0.9/reference#outlet-product-taxes",
-			"item": [
-				{
-					"name": "List outlet product taxes",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
+			"item": [{
+				"name": "List outlet product taxes",
+				"request": {
+					"method": "GET",
+					"header": [{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/inventory",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"inventory"
-							]
-						},
-						"description": "Returns a paginated list of outlet-product-tax records."
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": ""
 					},
-					"response": []
-				}
-			],
-			"event": [
-				{
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/inventory",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"inventory"
+						]
+					},
+					"description": "Returns a paginated list of outlet-product-tax records."
+				},
+				"response": []
+			}],
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "bda665c6-d9ed-442e-9754-a3e556480fd1",
@@ -943,13 +904,11 @@
 		{
 			"name": "Outlets",
 			"description": "https://docs.vendhq.com/v0.9/reference#outlets",
-			"item": [
-				{
+			"item": [{
 					"name": "List outlets",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -984,8 +943,7 @@
 					"name": "Get a single outlet",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1018,8 +976,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "5f794896-ea42-48d8-92e5-610ac0d18129",
@@ -1044,46 +1001,42 @@
 		{
 			"name": "Payment Types",
 			"description": "https://docs.vendhq.com/v0.9/reference#payment-types",
-			"item": [
-				{
-					"name": "List payment types",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
+			"item": [{
+				"name": "List payment types",
+				"request": {
+					"method": "GET",
+					"header": [{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/payment_types",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"payment_types"
-							]
-						},
-						"description": "Returns a paginated collection of payment types."
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": ""
 					},
-					"response": []
-				}
-			],
-			"event": [
-				{
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/payment_types",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"payment_types"
+						]
+					},
+					"description": "Returns a paginated collection of payment types."
+				},
+				"response": []
+			}],
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "73f258b2-4164-4fe3-83c4-712546f16e69",
@@ -1108,13 +1061,11 @@
 		{
 			"name": "Price Books",
 			"description": "https://docs.vendhq.com/v0.9/reference#price-books",
-			"item": [
-				{
+			"item": [{
 					"name": "List price book products copy",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1149,8 +1100,7 @@
 					"name": "Get a single price book",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1186,8 +1136,7 @@
 					"name": "Create a price book",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1219,8 +1168,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "cba14b6e-4eda-4e99-9d7f-b5a6ad26539f",
@@ -1245,46 +1193,42 @@
 		{
 			"name": "Price book Products ",
 			"description": "https://docs.vendhq.com/v0.9/reference#price-book-products",
-			"item": [
-				{
-					"name": "List price book products",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
+			"item": [{
+				"name": "List price book products",
+				"request": {
+					"method": "GET",
+					"header": [{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/price_book_products",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"price_book_products"
-							]
-						},
-						"description": "Returns a paginated list of price book products."
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": ""
 					},
-					"response": []
-				}
-			],
-			"event": [
-				{
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/price_book_products",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"price_book_products"
+						]
+					},
+					"description": "Returns a paginated list of price book products."
+				},
+				"response": []
+			}],
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "16cf3a1c-ae62-4916-910b-69d87838bade",
@@ -1309,13 +1253,11 @@
 		{
 			"name": "Product Brands",
 			"description": "https://docs.vendhq.com/v0.9/reference#brands",
-			"item": [
-				{
+			"item": [{
 					"name": "List brands",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1350,8 +1292,7 @@
 					"name": "Get a single brand",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1384,8 +1325,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "6b8d15dc-eaa2-44c5-b7be-49bd59a7cb98",
@@ -1410,13 +1350,11 @@
 		{
 			"name": "Product Images",
 			"description": "https://docs.vendhq.com/v0.9/reference#product-images",
-			"item": [
-				{
+			"item": [{
 					"name": "Upload an image",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1453,8 +1391,7 @@
 					"name": "Set Image Position",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1490,8 +1427,7 @@
 					"name": "Get a single product_image data",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1527,8 +1463,7 @@
 					"name": "Delete a product_image",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1561,8 +1496,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "a316f6c1-22f0-4ee8-a622-d2078a5b99cb",
@@ -1587,13 +1521,11 @@
 		{
 			"name": "Product Tags",
 			"description": "https://docs.vendhq.com/v0.9/reference#tags",
-			"item": [
-				{
+			"item": [{
 					"name": "List tags",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1628,8 +1560,7 @@
 					"name": "Get a single tag",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1662,8 +1593,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "f77cb767-51dd-4dc2-8379-3f966bd58a1f",
@@ -1688,13 +1618,11 @@
 		{
 			"name": "Product Types",
 			"description": "https://docs.vendhq.com/v0.9/reference#product-types",
-			"item": [
-				{
+			"item": [{
 					"name": "List types",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1729,8 +1657,7 @@
 					"name": "Get a single type",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1763,8 +1690,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "bbb002c8-0a60-4c0e-8d8e-a0458dc7e47c",
@@ -1789,13 +1715,11 @@
 		{
 			"name": "Products",
 			"description": "https://docs.vendhq.com/v0.9/reference#products-2",
-			"item": [
-				{
+			"item": [{
 					"name": "Delete Product",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1830,8 +1754,7 @@
 					"name": "List Products",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1866,8 +1789,7 @@
 					"name": "Create or update a product",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1901,8 +1823,7 @@
 					"name": "Get a Single Products",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -1935,8 +1856,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "a7c6d086-8601-4385-b09e-3055da2fa54b",
@@ -1961,13 +1881,11 @@
 		{
 			"name": "Registers",
 			"description": "https://docs.vendhq.com/v0.9/reference#registers",
-			"item": [
-				{
+			"item": [{
 					"name": "List registers",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2002,8 +1920,7 @@
 					"name": "Get a single register",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2036,8 +1953,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "e5d64dcf-dfb0-4c01-a24e-41291a066cbd",
@@ -2062,13 +1978,11 @@
 		{
 			"name": "Register Closures",
 			"description": "https://docs.vendhq.com/docs/closing-the-register",
-			"item": [
-				{
+			"item": [{
 					"name": "Get closure payment summary",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2105,8 +2019,7 @@
 					"name": "Close the Register",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2140,8 +2053,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "01a62193-174a-422e-afe0-e961e84f7305",
@@ -2166,13 +2078,11 @@
 		{
 			"name": "Sales",
 			"description": "https://docs.vendhq.com/v0.9/reference#sales",
-			"item": [
-				{
+			"item": [{
 					"name": "Update Sale",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2206,8 +2116,7 @@
 					"name": "Get a single sale",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2243,8 +2152,7 @@
 					"name": "List Sales",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2276,8 +2184,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "932fd8e0-d473-4d98-97c2-1e0c59557914",
@@ -2302,54 +2209,49 @@
 		{
 			"name": "Setup",
 			"description": "",
-			"item": [
-				{
-					"name": "Retailer Settings",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
+			"item": [{
+				"name": "Retailer Settings",
+				"request": {
+					"method": "GET",
+					"header": [{
+							"key": "Authorization",
+							"value": "Bearer {{token}}"
 						},
-						"url": {
-							"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/retailer",
-							"protocol": "https",
-							"host": [
-								"{{domainprefix}}",
-								"vendhq",
-								"com"
-							],
-							"path": [
-								"api",
-								"2.0",
-								"retailer"
-							]
+						{
+							"key": "Content-Type",
+							"value": "application/json"
 						}
+					],
+					"body": {
+						"mode": "raw",
+						"raw": ""
 					},
-					"response": []
-				}
-			]
+					"url": {
+						"raw": "https://{{domainprefix}}.vendhq.com/api/2.0/retailer",
+						"protocol": "https",
+						"host": [
+							"{{domainprefix}}",
+							"vendhq",
+							"com"
+						],
+						"path": [
+							"api",
+							"2.0",
+							"retailer"
+						]
+					}
+				},
+				"response": []
+			}]
 		},
 		{
 			"name": "Suppliers",
 			"description": "https://docs.vendhq.com/v0.9/reference#suppliers-2",
-			"item": [
-				{
+			"item": [{
 					"name": "List suppliers",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2384,8 +2286,7 @@
 					"name": "Create or update a supplier",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2419,8 +2320,7 @@
 					"name": "Get a single supplier",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2456,8 +2356,7 @@
 					"name": "Delete a supplier",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2490,8 +2389,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "fb706d20-149b-4d0b-84ba-30d7596e00ea",
@@ -2516,13 +2414,11 @@
 		{
 			"name": "Taxes",
 			"description": "https://docs.vendhq.com/v0.9/reference#taxes",
-			"item": [
-				{
+			"item": [{
 					"name": "List taxes",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2557,8 +2453,7 @@
 					"name": "Create a tax",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2592,8 +2487,7 @@
 					"name": "Get a single tax by ID",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2625,8 +2519,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "718d1c5f-ee61-4edd-aad8-315af1589297",
@@ -2651,13 +2544,11 @@
 		{
 			"name": "Users",
 			"description": "https://docs.vendhq.com/v0.9/reference#users-2",
-			"item": [
-				{
+			"item": [{
 					"name": "List users",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2692,8 +2583,7 @@
 					"name": "Get a single user",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2726,8 +2616,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "5c9a21f9-bbf9-4f6a-abea-2554b2d77327",
@@ -2752,13 +2641,11 @@
 		{
 			"name": "Webhooks",
 			"description": "https://docs.vendhq.com/v0.9/reference#webhooks-1",
-			"item": [
-				{
+			"item": [{
 					"name": "List Webhooks",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2789,8 +2676,7 @@
 					"name": "Get a single webhook",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2822,8 +2708,7 @@
 					"name": "Create Webhook",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2834,14 +2719,12 @@
 						],
 						"body": {
 							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "data",
-									"value": "{\"url\":\"https://placeholder.com\",\"active\":true,\"type\":\"product.update\"}\n\n",
-									"description": "",
-									"type": "text"
-								}
-							]
+							"urlencoded": [{
+								"key": "data",
+								"value": "{\"url\":\"https://placeholder.com\",\"active\":true,\"type\":\"product.update\"}\n\n",
+								"description": "",
+								"type": "text"
+							}]
 						},
 						"url": {
 							"raw": "https://{{domainprefix}}.vendhq.com/api/webhooks",
@@ -2864,8 +2747,7 @@
 					"name": "Update Webhook",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2899,8 +2781,7 @@
 					"name": "Delete Webhook",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
+						"header": [{
 								"key": "Authorization",
 								"value": "Bearer {{token}}"
 							},
@@ -2932,8 +2813,7 @@
 					"response": []
 				}
 			],
-			"event": [
-				{
+			"event": [{
 					"listen": "prerequest",
 					"script": {
 						"id": "dc6fda73-9e80-4325-bc97-fadd0da8f52a",
@@ -2956,8 +2836,7 @@
 			]
 		}
 	],
-	"event": [
-		{
+	"event": [{
 			"listen": "prerequest",
 			"script": {
 				"id": "951071f4-d7cc-43d7-8269-c17dd6c706f2",
